@@ -18,8 +18,17 @@ spring:
     username: root
     password: root
 
-#Eureka配置
+#Eureka配置，服务注册到哪里
 eureka:
   client:
     service-url:
      defaultZone: http://127.0.0.1:7001/eureka/
+
+    #自定义eureka 管理界面的UP名称
+  instance:
+    instance-id: springcloud-provider-dept-8001
+
+#info配置
+info:
+  app.name: feng-springcloud
+  company.name: www.huawei.com
