@@ -22,11 +22,12 @@ spring:
 eureka:
   client:
     service-url:
-     defaultZone: http://127.0.0.1:7001/eureka/
+     defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
 
     #自定义eureka 管理界面的UP名称
   instance:
     instance-id: springcloud-provider-dept-8001
+    prefer-ip-address: true #true,管理页面可以显示服务ip地址
 
 #info配置
 info:

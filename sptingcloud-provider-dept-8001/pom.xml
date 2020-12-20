@@ -12,6 +12,11 @@
     <artifactId>sptingcloud-provider-dept-8001</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+            <version>1.4.6.RELEASE</version>
+        </dependency>
         <!--我们需要拿到实体类，所以需要配置api Moudle-->
         <dependency>
             <groupId>com.feng</groupId>

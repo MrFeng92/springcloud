@@ -53,10 +53,10 @@ public class DeptController
         List<ServiceInstance> instances = discoveryClient.getInstances("springcloud-provider-dept");
         for (ServiceInstance instance : instances)
         {
-            System.out.println("Host:"+instance.getHost());
-            System.out.println("Port:"+instance.getPort());
-            System.out.println("Uri:"+instance.getUri());
-            System.out.println("ServiceId:"+instance.getServiceId());
+            System.out.println("Host:" + instance.getHost());
+            System.out.println("Port:" + instance.getPort());
+            System.out.println("Uri:" + instance.getUri());
+            System.out.println("ServiceId:" + instance.getServiceId());
         }
 
         return this.discoveryClient;

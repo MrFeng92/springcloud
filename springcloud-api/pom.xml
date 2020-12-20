@@ -11,7 +11,14 @@
 
     <artifactId>springcloud-api</artifactId>
 
-    <!--当前模块自己需要的模块，如果父依赖配置了版本，这里就不用配置-->
-
+    <!--当前的Module自己需要的依赖，如果父类依赖中已经配置了版本。这里就不用写了-->
+       <dependencies>
+           <!--feign-->
+           <dependency>
+               <groupId>org.springframework.cloud</groupId>
+               <artifactId>spring-cloud-starter-feign</artifactId>
+               <version>1.4.6.RELEASE</version>
+           </dependency>
+       </dependencies>
 
 </project>
