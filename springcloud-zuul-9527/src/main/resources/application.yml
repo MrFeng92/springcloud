@@ -1,0 +1,30 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: springcloud-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: zuul9527.com # 修改eureka上的默认描述信息
+    prefer-ip-address: true
+
+info:
+  app.name: feng-springcloud
+  company.name: www.fengstudy.com
+
+## 路由网关配置
+zuul:
+  routes:
+    mydept.serviceId: springcloud-provider-dept # eureka注册中心的服务提供方路由名称
+    mydept.path: /mydept/** # 将eureka注册中心的服务提供方路由名称 改为自定义路由名称
+#效果由原来的访问地址 http://www.fengstudy.com:9527/springcloud-provider-dept/dept/get/1
+#变成 http://www.fengstudy.com:9527/mydept/dept/get/1
+#ignored-services: springcloud-provider-dept
+# 不能再使用这个路径访问了，ignore : 忽略 | “*” 隐藏全部的微服务真实路径
+  ignored-services: "*"
+  prefix: /feng # 公共设置的前缀 http://www.fengstudy.com:9527/feng/mydept/dept/get/1
