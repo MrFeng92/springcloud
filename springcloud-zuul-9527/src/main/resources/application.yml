@@ -28,3 +28,4 @@ zuul:
 # 不能再使用这个路径访问了，ignore : 忽略 | “*” 隐藏全部的微服务真实路径
   ignored-services: "*"
   prefix: /feng # 公共设置的前缀 http://www.fengstudy.com:9527/feng/mydept/dept/get/1
+
